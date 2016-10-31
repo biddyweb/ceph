@@ -4984,7 +4984,7 @@ TEST_F(TestLibRBD, ExclusiveLock)
 TEST_F(TestLibRBD, DiscardAfterWrite)
 {
   CephContext* cct = reinterpret_cast<CephContext*>(_rados.cct());
-  REQUIRE(!cct->_conf->rbd_skip_partial_discard)'
+  REQUIRE(!cct->_conf->rbd_skip_partial_discard);
 
   librados::IoCtx ioctx;
   ASSERT_EQ(0, _rados.ioctx_create(m_pool_name.c_str(), ioctx));
